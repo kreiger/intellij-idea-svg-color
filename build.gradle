@@ -1,0 +1,23 @@
+plugins {
+    id("java")
+    id("org.jetbrains.intellij") version "1.17.0"
+}
+
+group = "com.linuxgods.kreiger.intellij.idea.svg.color"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+intellij {
+    version = "2023.1"
+    type = "IC" // Target IDE Platform
+    plugins = ['com.intellij.platform.images']
+    updateSinceUntilBuild = false
+    downloadSources = true
+}
+
+tasks.withType(JavaCompile) {
+    options.release = 17
+}

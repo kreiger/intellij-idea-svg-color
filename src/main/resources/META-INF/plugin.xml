@@ -1,0 +1,19 @@
+<idea-plugin url="https://github.com/kreiger/intellij-idea-svg-color">
+    <id>com.linugods.kreiger.intellij.idea.svg.color</id>
+    <name>SVG Color</name>
+    <vendor>Christoffer Hammarström</vendor>
+    <idea-version since-build="231"/>
+
+    <description><![CDATA[
+        <p>
+            This plugin adds support for previewing SVG colors in the editor gutter.
+        </p>
+    ]]>
+    </description>
+    
+    <depends>com.intellij.platform.images</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <colorProvider implementation="com.linuxgods.kreiger.intellij.idea.svg.color.SvgColorProvider"/>
+    </extensions>
+</idea-plugin>
